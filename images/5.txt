@@ -1,0 +1,1 @@
+Average Pearlite Grain Area (pixels): 394.038961038961Average Pearlite Width (pixels): 9.830820411830754Average Pearlite Length (pixels): 62.940632485724116Average Pearlite Orientation (degrees)[60.372997]

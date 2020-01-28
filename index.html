@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>CMS - Computational Materials Society</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/83363726_100641868157678_2533664975289843712_o.png?_nc_cat=105&_nc_oc=AQlfsBw91ie9EP7CKw76qfOkstqdFsfNuNZFOw-HiRhvJF_hrCWif5HyG2zSL4P8uC0&_nc_ht=scontent-yyz1-1.xx&oh=605d9402c11be54da9ce6a641ca8d34d&oe=5E8EA1F2" />
+
+
+
+
+	</head>
+	<body class="landing">
+
+
+		<script>
+
+			$("#file-picker").change(function(){
+		
+				var input = document.getElementById('file-picker');
+		
+				for (var i=0; i<input.files.length; i++)
+				{
+				//koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+					var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+		
+					if ((ext == 'jpg') || (ext == 'png'))
+					{
+						$("#msg").text("Files are supported")
+					}
+					else
+					{
+						$("#msg").text("Files are NOT supported")
+						document.getElementById("file-picker").value ="";
+					}
+		
+				}
+		
+		
+			} );
+		
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><strong><a href="index.html">CMS</a></strong> - Computational Materials Society</h1>
+				<nav id="nav">
+					<!--<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav> -->
+			</header>
+		
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>Voronoi Core</h2>
+				<p>Using feature characterization, machine learning, and image processing you can clearly process microstructures.</p>
+				
+				<ul class="actions">
+					<br><li><a href="#button_upload" class="button special big">Get Started</a></li>
+				</ul>
+			</section>
+
+			<!-- Two -->
+			<section id="two" class="wrapper 80% style2 special">
+				<div class="container">
+					<header class="major">
+						<h2>What We're Working With</h2>
+						<p>Datasets provided include:</p>
+					</header>
+					<div class="row 150%">
+						<div class="6u 12u$(xsmall)">
+							<div class="image fit captioned">
+								<img src="media/pic02.jpg" alt="" />
+								<h3>Microstructures</h3>
+							</div>
+						</div>
+						<div class="6u$ 12u$(xsmall)">
+							<div class="image fit captioned">
+								<img src="media/pic03.jpg" alt="" />
+								<h3>Curtaining</h3>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+		
+			<!-- One -->
+			<a name="button_upload"><section id="one" class="wrapper style1"></a>
+				<section id="four" class="wrapper special">
+					<div class="container">
+						<header class="major">
+							<h2>Upload a file</h2>
+							<p>Insert a .jpeg, .jpg, or .png file for image processing</p>
+						</header>
+						
+							<a href="http://localhost:4555/" class="button special big">Upload Now</a>
+						
+					</div>
+				</section>	
+
+			<!-- Two -->
+			<section id="two" class="wrapper 80% style2 special overlay">
+				<div class="container">
+					<header class="major">
+						<h2>Image Segmentation</h2>
+						<p>After filtering of artifacts and using greyscale segmentation:</p>
+					</header>
+					<div class="row 150%">
+						<!--Before Image-->
+						<div class="6u 12u$(xsmall)" >
+							<div class="image fit captioned">
+								<img src="images/0.png"  alt="" />
+								<h3>Before</h3>							
+							</div>
+						</div>
+						<!--After Image-->
+						<div class="6u$ 12u$(xsmall)">
+							<div class="image fit captioned">
+								<img src="images/1.png" alt="" />
+								<h3>After</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="row 150%">
+							<!--Histogram 1-->
+							<div class="6u 12u$(xsmall)">
+								<div class="image fit captioned">
+									<img src="images/2.png" alt="HISTO" />
+									<h3>Grain Count by Diameter & Pixels</h3>
+									<h2><iframe src='images/2.txt' scrolling='no' frameborder='0' script="text-align: center"></iframe></h2>
+								</div>
+							</div>
+							<!--Histogram 2-->
+							<div class="6u$ 12u$(xsmall)">
+								<div class="image fit captioned">
+									<img src="images/3.png" alt="HISTO" />
+									<h3>White Grain Count by Diameter</h3>
+									<h2><iframe src='images/3.txt' scrolling='no' frameborder='0' script="text-align: center"></iframe></h2>
+								</div>	
+							</div>
+						</div>	
+
+						<div class="row 150%">
+							<!--Histogram 1-->
+							<div class="6u 12u$(xsmall)">
+								<div class="image fit captioned">
+									<img src="images/4.png" alt="" />
+									<h3>Black Grain Count by Diameter</h3>
+									<h2><iframe src='images/4.txt' scrolling='no' frameborder='0' script="text-align: center"></iframe></h2>
+								</div>
+							</div>
+							<!--Histogram 2-->
+							<div class="6u$ 12u$(xsmall)">
+								<div class="image fit captioned">
+									<img src="images/5.png" alt="" />
+									<h3>Pearlite Orientations by Count</h3>
+									<h2><iframe src='images/5.txt' scrolling='no' frameborder='0' script="text-align: center"></iframe></h2>
+								</div>	
+							</div>
+						</div>
+					</div>
+					
+			</section>
+
+			
+
+			<!-- Three -->
+				<section id="three" class="wrapper style1">
+					<div class="container">
+						<header class="major special">
+							<h2>Computational Materials Team</h2>
+							<p>Our product is code.  Our strength is people.</p>
+						</header>
+						<div class="feature-grid">
+							<div class="feature">
+								<div class="image rounded"><img src="media/pic04.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Irenaeus Wong</h4>
+										<p>Co-President CMS</p>
+									</header>
+									<p>Materials Engineering II with a specialization in computational materials.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="media/pic05.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Jeremy Wilson</h4>
+										<p>Co-President CMS</p>
+									</header>
+									<p>Materials Engineering II with a specialization in computational materials.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="media/pic06.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Kevin Mensah</h4>
+										<p>VP Technical</p>
+									</header>
+									<p>Materials Engineering II with a passion for game dev, AI, and machine learning.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="media/pic07.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Sarah Gonder</h4>
+										<p>VP Operations</p>
+									</header>
+									<p>Materials Engineering & Society II with a passion for simulation, design, and sustainability.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Four -->
+				<section id="four" class="wrapper style3 special">
+					<div class="container">
+						<header class="major">
+							<h2>McMaster CMS</h2>
+							<p>Empowering materials innovation through machine learning, data analytics, and image processing.</p>
+						</header>
+						<ul class="actions">
+							<li><a href="https://www.facebook.com/mcmastercms/" class="button special big" target="_blank">Get in touch</a></li>
+						</ul>
+					</div>
+				</section>
+
+				
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/mcmastercms/" class="icon fa-facebook" target="_blank"></a></li>
+						
+						<li><a href="https://www.instagram.com/mcmastercms/" class="icon fa-instagram target="_blank""></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; McMaster CMS</li>
+						<li>Design: <a href="http://templated.co target="_blank"">TEMPLATED</a></li>
+						<li>Images: <a href="https://deltahacks.com target="_blank"">Deltahacks VI</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

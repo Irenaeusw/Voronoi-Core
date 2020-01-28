@@ -1,0 +1,1 @@
+Total White Grains Area (pixels): 545773.5Total Black Grains Area (pixels): 502802.5Total Pearlite Area (pixels): 30341.0
