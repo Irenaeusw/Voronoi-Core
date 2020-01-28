@@ -388,6 +388,9 @@ def main(src_path):
 
     img = cv2.imread(img_dir, 1) 
     microstructure = MicroStructure(img) 
+    
+    # Save original image as 0.png into the save directory
+    cv2.imwrite("{}\\0.png".format(saveDir), img)
 
     # ANALYSIS OF WHITE GRAINS - START
     microstructure.getWhiteGrains() 
